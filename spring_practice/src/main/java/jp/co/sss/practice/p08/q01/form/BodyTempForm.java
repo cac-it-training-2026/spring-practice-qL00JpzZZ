@@ -2,8 +2,6 @@ package jp.co.sss.practice.p08.q01.form;
 
 import java.util.Date;
 
-import org.springframework.format.annotation.DateTimeFormat;
-
 import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotNull;
@@ -43,6 +41,5 @@ public class BodyTempForm {
 	@DecimalMax(value = "45.0")
 	Double bodyTemp;
 	@NotNull
-	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	Date inputDate;
 }
