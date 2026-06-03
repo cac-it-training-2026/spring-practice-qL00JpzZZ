@@ -21,12 +21,10 @@ public class Practice0801Controller {
 	}
 
 	@RequestMapping(path = "/body_temp/check", method = RequestMethod.POST)
-	String check(@Valid @ModelAttribute BodyTempForm bodyTempForm, BindingResult result, Model model) {
+	String check(@Valid @ModelAttribute BodyTempForm bodyTempForm, BindingResult result) {
 		if (result.hasErrors()) {
 			return "practice08/01/bt_input";
 		}
-
-		model.addAttribute("temp", bodyTempForm);
 
 		// 体温判定
 		if (bodyTempForm.getBodyTemp() >= 37.0) {
