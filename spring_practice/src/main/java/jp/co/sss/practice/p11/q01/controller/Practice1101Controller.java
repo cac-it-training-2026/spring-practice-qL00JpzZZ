@@ -12,7 +12,7 @@ public class Practice1101Controller {
 	@RequestMapping("/fortune")
 	String fortune(Model model) {
 		int ans;
-		ans = (int) ((Math.random() * 4) + 1);
+		ans = (int) ((Math.random() * 5) + 1);
 		System.out.println(ans);
 		model.addAttribute("ans", ans);
 		LocalDate today = LocalDate.now();
